@@ -1,6 +1,6 @@
 package Players;
 
-public class Cleric extends Player {
+public class Cleric extends Player implements ICollect {
     private Cleric cleric;
     private String healingTool;
 
@@ -12,5 +12,9 @@ public class Cleric extends Player {
 
     public String getHealingTool() {
         return this.healingTool;
+    }
+
+    public String collect(){
+        return "Cleric collect";
     }
 }

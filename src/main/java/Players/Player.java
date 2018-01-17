@@ -27,4 +27,8 @@ public abstract class Player {
     public int getTreasuresCount() {
         return this.treasures.size();
     }
+
+    public void setHealthPoints(int points) {
+        this.healthPoints += points;
+    }
 }

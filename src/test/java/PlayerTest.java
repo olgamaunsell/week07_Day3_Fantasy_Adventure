@@ -1,7 +1,9 @@
 import Players.Cleric;
+import Players.Enemy;
 import Players.Dwarve;
 import Players.Player;
 import Players.Warlock;
+import Tools.Weapon;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,15 +14,18 @@ public class PlayerTest {
     Dwarve dwarve;
     Warlock warlock;
     Cleric cleric;
+    Enemy enemy;
+    Weapon weapon;
 
 
     @Before
 
     public void before(){
-        dwarve = new Dwarve("Joe", "Axe");
+        weapon = new Weapon("Axe", -20);
+        dwarve = new Dwarve("Joe", weapon);
         warlock = new Warlock("Jim", "Fireball", "Dragon");
         cleric = new Cleric("Jon", "Potion");
-
+        enemy = new Enemy("Big Bad Baddie");
     }
 
     @Test
@@ -56,6 +61,19 @@ public class PlayerTest {
     @Test
     public void canGetClericHealingTool(){
         assertEquals("Potion", cleric.getHealingTool());
+    }
+
+    @Test
+    public void dwarveCanAttack(){
+        dwarve.attack(enemy);
+        assertEquals(80, enemy.getHealthPoints());
+    }
+
+    @Test
+
+    public void canSetEnemyHealthPoints(){
+        enemy.setHealthPoints(-20);
+        assertEquals(80, enemy.getHealthPoints());
     }
 
 }

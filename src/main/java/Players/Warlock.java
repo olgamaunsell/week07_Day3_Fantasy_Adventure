@@ -2,7 +2,7 @@ package Players;
 
 import java.util.ArrayList;
 
-public class Warlock extends Player {
+public class Warlock extends Player implements ICollect {
     private Warlock warlock;
     private String spell;
     private String creature;
@@ -20,5 +20,9 @@ public class Warlock extends Player {
 
     public String getCreature() {
         return this.creature;
+    }
+
+    public String collect(){
+        return "Warlock collect";
     }
 }
