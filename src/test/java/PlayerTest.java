@@ -1,7 +1,6 @@
 import Players.Cleric;
-import Players.Enemy;
+import Rooms.Enemy;
 import Players.Dwarve;
-import Players.Player;
 import Players.Warlock;
 import Tools.Weapon;
 import org.junit.Before;

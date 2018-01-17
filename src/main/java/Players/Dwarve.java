@@ -1,5 +1,6 @@
 package Players;
 
+import Rooms.Enemy;
 import Tools.Weapon;
 
 public class Dwarve extends Player implements ICollect, IAttack{

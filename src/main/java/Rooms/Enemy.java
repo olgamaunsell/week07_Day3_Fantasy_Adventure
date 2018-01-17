@@ -1,6 +1,6 @@
-package Players;
+package Rooms;
 
-import java.util.ArrayList;
+import Players.Player;
 
 public class Enemy extends Player {
     private Enemy enemy;
